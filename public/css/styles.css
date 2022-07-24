@@ -274,6 +274,31 @@ box-shadow: 0px 0px 1px 1px #1fb31a;
   .menu-title-class p{
     font-size: 1.5rem;
   }
+
+}
+@media(max-width: 500px){
+  .main-title-class h1{
+    font-size: 2.0rem;
+  }
+  .Order-button{
+    font-size: 1.5rem;
+    padding: 2% 7%;
+  }
+}
+@media(max-width: 410px){
+  .main-title-class h1{
+    font-size: 2.0rem;
+  }
+  .Order-button{
+    font-size: 1.5rem;
+    padding: 2% 5%;
+  }
+}
+@media(max-width: 388px){
+  .Order-button{
+    font-size: 1.2rem;
+    padding: 2% 5%;
+  }
 }
 @media(max-width: 800px){
   .login-class, .signup-class{
