@@ -1,0 +1,302 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/*  --------------------- ---------------------  NAVBAR|FOOTER --------------------- --------------------- */
+/* PIZZA LOGO */
+.pizza-logo{
+    width: 200px;
+}
+/* Navber */
+.navbar{
+   background-color: white;
+   padding: 0% 15%;
+}
+.navbar-toggler{
+  border: none;
+}
+.nav-item{
+  padding: 0 10px;
+}
+.nav-link{
+  font-size: 1.0rem;
+  font-family: 'Ubuntu';
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #5f88a3;
+}
+
+.nav-link:hover{
+  color: #34507b;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+.content-wrap{
+  padding-bottom: 2.5rem;
+}
+#footer{
+  position: absolute;
+  width: 100%;
+  padding: 3% 15%;
+  bottom: -100px;
+  text-align: center;
+  color: white;
+  background-color: #1a5ca3;
+
+}
+.social-icon{
+  margin: 2px 10px;
+}
+/*  --------------------- ---------------------  LANDING PAGE STYLING  --------------------- --------------------- */
+#main-title{
+  margin: 0px;
+  height: 70vh;
+  padding: 5% 15%;
+  /* background-color: #1a5ca3; */
+  background-image: url("../images/back_img2.png");
+}
+.title-img{
+  position: absolute;
+  width: 90%;
+  margin-left: 5%;
+}
+/* Main Title Headings */
+ .main-title-class h1, .menu-title-class h1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 3.0rem;
+  line-height: 1.5;
+  color: white;
+}
+ .main-title-class h4{
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  opacity: 0.7;
+}
+/* Order button */
+.Order-button{
+  margin: 5% 3% 5% 0;
+  background-color: #1fb31a;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  padding: 2% 9%;
+}
+.Order-button:hover a{
+  color: #1a5ca3;
+}
+.Order-button a{
+  color: white;
+  text-decoration: none;
+}
+/* Features styling */
+.card-img-top{
+  width: 70%;
+  margin: auto;
+}
+.item{
+  padding: 3% 2%;
+}
+.bestseller-content, .menu-content{
+  padding: 8% 10%;
+}
+/*  --------------------- --------------------- MENU PAGE STYLING  --------------------- --------------------- */
+/* Menu page */
+.menu-title-class{
+  height: 40vh;
+  background-image: url("../images/background.png");
+  text-align: center;
+  padding: 6%;
+}
+.menu-title-class p{
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+/* Add to cart button */
+.card-body{
+  text-align: center;
+}
+.cart-button{
+  background-color: transparent;
+  border: 3px solid #f64446;
+
+}
+.cart-button a{
+  color: #f64446;
+  text-decoration: none;
+}
+.cart-button:hover{
+  border: none;
+  background-color: #f64446;
+}
+.cart-button:hover a{
+  color: white;
+}
+
+/*  --------------------- ---------------------  PIZZA PAGE STYLING  --------------------- --------------------- */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.single-pizza-page{
+  padding: 2% 10%;
+}
+th, td{
+  padding: 5px;
+}
+.place-order-button{
+  width: 100%;
+  color: #f64446;
+  border: 2px solid #f64446;
+}
+.place-order-button:hover{
+  background-color: #f64446;
+  color: white;
+}
+/*  --------------------- ---------------------  LOGIN/SIGNUP PAGE STYLING  --------------------- --------------------- */
+/* form ui */
+.login-class, .signup-class{
+  width: 50%;
+  margin: auto;
+}
+.login-button, .signup-button{
+  border: none;
+  background-color: #1a5ca3;
+  color: white;
+}
+.login-button:hover, .signup-button:hover{
+  background-color: transparent;
+  border: 3px solid #1a5ca3;
+  color: #1a5ca3;
+}
+.signup-link, .login-link{
+  color:  #f64446;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 20px;
+}
+.signup-class, .login-class{
+  margin-top: 5%;
+}
+.form-heading{
+  text-align: center;
+  color: #1a5ca3;
+}
+.password-not-match{
+  border: 1px solid #f64446;
+  box-shadow: 0px 0px 1px 1px #f64446;
+}
+.password-match{
+  border: 1px solid;
+box-shadow: 0px 0px 1px 1px #1fb31a;
+}
+#login_message{
+  display: block;
+  background-color: rgba(246, 68, 70, 0.8);
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  margin: 1rem 0;
+  color: white;
+  font-weight: bold;
+}
+
+
+/*  --------------------- ---------------------  ORDER PAGE STYLING  --------------------- --------------------- */
+/* ORDERS PAGE CSS */
+.single-order-img-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.single-order img{
+  width: 50%;
+}
+.single-order-price-buttons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.single-order-price-buttons h5{
+  color: #1fb31a;
+  font-weight: bold;
+}
+.cancel-btn:hover{
+  background-color: rgb(200,200,200);
+}
+.cancel-btn a{
+  text-decoration: none;
+    color: black;
+}
+.empty-order-heading{
+  text-align: center;
+  color: rgb(232,232,232);
+}
+.single-order-title{
+  font-weight: bold;
+  font-size:1.2rem;
+}
+.single-order-discription{
+  opacity: 0.7;
+}
+.orders{
+  margin-top: 50px;
+}
+#order_placed_message{
+  display: block;
+  background-color: #1fb31a;
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  margin: 1rem 0;
+  color: white;
+  font-weight: bold;
+}
+
+/* media query */
+/* background-image: url("../images/back_img1.png"); */
+@media(max-width:991px){
+  #main-title{
+    background-image: url("../images/back_img1.png");
+  }
+  .landing-shop-img{
+    display: none;
+  }
+}
+@media(max-width: 600px){
+  .menu-title-class h1{
+    font-size: 2.5rem;
+  }
+  .menu-title-class p{
+    font-size: 1.5rem;
+  }
+}
+@media(max-width: 800px){
+  .login-class, .signup-class{
+    width: 70%;
+  }
+}
+@media(max-width: 500px){
+  .login-class, .signup-class{
+    width: 90%;
+  }
+  .navbar-brand img{
+    width: 150px;
+  }
+  .navbar-toggler-icon{
+    width: 20px;
+  }
+  .navbar-toggler{
+    padding: 2px 10px;
+    border: none;
+  }
+}
+@media(max-width: 1200px){
+  .single-order img{
+    width: 100%;
+  }
+}

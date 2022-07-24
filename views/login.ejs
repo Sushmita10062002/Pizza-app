@@ -1,0 +1,30 @@
+<%-include("partials/header")-%>
+<div class="content-wrap">
+  <%-include("navbar")-%>
+  <div class="container login-class">
+      <h4 class="form-heading">Login to your Account</h4>
+      <form class="px-4 py-3" action="/login" method="POST">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" name="username" class="form-control" id="email" placeholder="email@example.com" required autocomplete="off">
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <%if(login_err!=""){%>
+            <span id="login_message"><%=login_err%></span>
+          <%}%>
+          <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn login-button">Login</button>
+        <a href="/signup" class="signup-link">Sign up</a>
+      </form>
+      <div class="card-body">
+        <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+          <i class="fab fa-google"></i>
+          Login with Google
+        </a>
+      </div>
+    </div>
+  </div>
+<%-include("partials/footer")-%>

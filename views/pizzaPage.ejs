@@ -1,0 +1,73 @@
+<%-include("partials/header")-%>
+<div class="content-wrap">
+  <section>
+    <div>
+      <!-- Navbar -->
+     <%-include("navbar")-%>
+    </div>
+  </section>
+  <!-- About Single Pizza -->
+  <section id="pizza" class="single-pizza-page">
+    <div class="row">
+      <div class="col-lg-6">
+        <img src=<%=pizzaItem.img%> alt="pizza-image">
+        <h3><%=pizzaItem.title%></h3>
+        <p><%=pizzaItem.discription%></p>
+        <hr>
+        <h3>Tommy Pizza Price list</h3>
+        <hr>
+        <table style="width: 100%">
+          <tr>
+            <th>Size</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Regular</td>
+            <td>Rs. <%=pizzaItem.price.regular%></td>
+          </tr>
+          <tr>
+            <td>Medium</td>
+            <td>Rs. <%=pizzaItem.price.medium%></td>
+          </tr>
+          <tr>
+            <td>Large</td>
+            <td>Rs. <%=pizzaItem.price.large%></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-lg-6">
+        <%if(orderPlaced){%>
+          <span id="order_placed_message">Order Placed Successfully</span>
+        <%}%>
+        <h3>Order here</h3>
+        <hr>
+
+        <form class="" action="/pizzaPage/<%=pizzaItem._id%>" method="post">
+          <div class="mb-3">
+            <h4>Size: </h4>
+            <input type="radio" id="regular" name="Size" value="regular" required>
+            <label for="regular">Regular</label><br>
+            <input type="radio" id="medium" name="Size" value="medium" required>
+            <label for="medium">Medium</label><br>
+            <input type="radio" id="large" name="Size" value="large" required>
+            <label for="large">Large</label><br>
+          </div>
+          <div class="mb-3">
+            <label for="quantity" class="form-label"><h4>Quantity: </h4></label><br>
+            <input type="number" id="quantity" class="form-control" name="Quantity" min="1" placeholder="Enter the Quantity of Pizza" required>
+          </div>
+          <%if(!login){%>
+            <button class="btn btn-lg place-order-button" disabled=true >Please login to Place Order</button>
+          <%}else{%>
+            <button type="submit" class="btn btn-lg place-order-button">Place Order</button>
+          <%}%>
+        </form>
+
+      </div>
+    </div>
+    <br>
+    <br>
+  </section>
+</div>
+
+<%-include("partials/footer")-%>

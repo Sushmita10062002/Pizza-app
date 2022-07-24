@@ -1,0 +1,50 @@
+<%-include("partials/header")-%>
+<div class="content-wrap">
+  <section>
+    <div>
+      <!-- Navbar -->
+     <%-include("navbar")-%>
+      <div class="row main-title-class" id="main-title">
+        <div class="col-lg-6">
+          <h1>Tomy Pizza online ordering</h1>
+          <h4>Yummy pizza delivered fast & fresh</h4>
+          <button type="button" class="btn btn-light btn-lg Order-button">
+            <a href="/menu">Order Online Now</a>
+          </button>
+        </div>
+        <div class="col-lg-6 landing-shop-img" style="position: relative;">
+          <img src="images/pizza-shop.png" class="title-img" alt="pizzaImg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bestsellers -->
+
+  <section id="bestsellers">
+    <div class="bestseller-content">
+      <h1 style="color: #1a5ca3; text-align:center">Bestsellers</h1>
+      <div class="row">
+        <%listItems.forEach(function(item){%>
+          <%if(item.bestseller){%>
+            <div class="col-md-6 col-lg-4 item">
+              <div class="card mb-3">
+                <img src="<%=item.img%>" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%=item.title%></h5>
+                  <p class="card-text"><%=item.discription%></p>
+                  <button type="button" class="btn btn-lg cart-button">
+                    <a href="/pizzaPage/<%=item._id%>">Add to Cart</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          <%}%>
+        <%})%>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<%-include("partials/footer")-%>

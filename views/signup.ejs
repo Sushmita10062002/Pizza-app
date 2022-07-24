@@ -1,0 +1,31 @@
+<%-include("partials/header")-%>
+<div class="content-wrap">
+  <%-include("navbar")-%>
+  <div class="container signup-class">
+      <h4 class="form-heading">Create Account</h4>
+      <form class="px-4 py-3" action="/signup" method="POST"  onsubmit="validate()">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" name="username" class="form-control" id="email" placeholder="email@example.com" autocomplete="off" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="password" placeholder="Password" onkeyup='check();' required>
+        </div>
+        <span id='message'></span>
+        <div class="mb-3">
+          <label for="password" class="form-label">Confirm Password</label>
+          <input type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="Confirm Password" onkeyup='check();' required>
+        </div>
+        <button type="submit" class="btn signup-button">Sign up</button>
+        <a href="/login" class="login-link">Login</a>
+      </form>
+      <div class="card-body">
+        <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+          <i class="fab fa-google"></i>
+          Sign Up with Google
+        </a>
+      </div>
+    </div>
+  </div>
+<%-include("partials/footer")-%>

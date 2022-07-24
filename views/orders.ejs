@@ -1,0 +1,42 @@
+<%-include("partials/header")-%>
+<div class="content-wrap">
+  <section>
+    <div>
+      <!-- Navbar -->
+      <%-include("navbar")-%>
+    </div>
+  </section>
+  <section>
+    <div class="orders container">
+      <div class="single-order">
+        <%if(Orderlist.length === 0){%>
+          <h1 class="empty-order-heading">Your Cart is Empty. Please Order!</h1>
+        <%}%>
+        <%Orderlist.forEach(function(item){%>
+        <div class="row">
+          <div class="col-3 col-md-4 col-sm-6 single-order-img-container">
+            <img src="<%=item.img%>" alt="pizza-img">
+          </div>
+          <div class="col-9 col-md-8 col-sm-6">
+            <p class="single-order-title"><%=item.title%></p>
+            <p class="single-order-discription"><%=item.discription%></p>
+            <h6>SIZE: <%=item.Size%></h6>
+            <h6>QUANTITY: <%=item.Quantity%></h6>
+            <br>
+            <div class="single-order-price-buttons">
+              <h5>Total Price: ₹ <%=item.totalPrice%></h5>
+              <button type="button" class="btn btn-block btn-outline-secondary cancel-btn" name="Cancel">
+                <a href="/orders/delete/<%=item.order_id%>">Cancel Order</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <br>
+        <%})%>
+      </div>
+    </div>
+  </section>
+</div>
+
+<%-include("partials/footer")-%>

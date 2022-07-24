@@ -1,0 +1,39 @@
+<%-include("partials/header")-%>
+<div class="content-wrap">
+  <section>
+    <div>
+      <!-- Navbar -->
+     <%-include("navbar")-%>
+      <div class="menu-title-class" id="menu-title">
+          <h1>GET YOUR FAVOURITE PIZZA.</h1>
+          <p>Free Delivery</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bestsellers -->
+
+  <section id="menu">
+    <div class="menu-content">
+      <div class="row container-fluid">
+        <%listItems.forEach(function(item){%>
+          <div class="col-md-6 col-lg-4 item">
+            <div class="card mb-3">
+              <img src="<%=item.img%>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><%=item.title%></h5>
+                <p class="card-text"><%=item.discription%></p>
+               <button type="button" class="btn btn-lg cart-button">
+                <a href="/pizzaPage/<%=item._id%>">Add to Cart</a>
+               </button>
+              </div>
+            </div>
+          </div>
+        <%})%>
+
+      </div>
+    </div>
+
+  </section>
+</div>
+<%-include("partials/footer")-%>
