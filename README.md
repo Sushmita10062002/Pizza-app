@@ -5,5 +5,5 @@
   Pizza
 </h3>
 <div>
-  <img src="public/images/pizza-web-app.png" style="width: 20px; height:20px;">
+  <img src="public/images/pizza-web-app.png"">
 </div>
