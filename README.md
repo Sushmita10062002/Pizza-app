@@ -7,3 +7,17 @@
 <div>
   <img src="public/images/pizza-web-app.png"">
 </div>
+<h1>Frameworks and Languages Used</h1>
+<ul>
+    <li>
+        HTML, CSS and Javacript
+    </li>
+    <li>
+        Express
+    </li>
+    <li>Mongoose</li>
+    <li>EJS</li>
+    <li>Passport</li>
+</ul>
+<h1>Deployment</h1>
+<p>Web App deployment: https://order-tommy-pizza.herokuapp.com/</p>
