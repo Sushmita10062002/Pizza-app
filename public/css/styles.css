@@ -181,7 +181,8 @@ th, td{
   margin-left: 20px;
 }
 .signup-class, .login-class{
-  margin-top: 5%;
+  margin-top: 8%;
+  margin-bottom: 8%;
 }
 .form-heading{
   text-align: center;
@@ -204,6 +205,14 @@ box-shadow: 0px 0px 1px 1px #1fb31a;
   color: white;
   font-weight: bold;
 }
+/* --------------------- --------------------- Social Button Styling */
+.btn-google {
+  color: #545454;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 1px #ddd;
+  font-size: 1rem;
+  border: none;
+}
 
 
 /*  --------------------- ---------------------  ORDER PAGE STYLING  --------------------- --------------------- */
@@ -213,9 +222,9 @@ box-shadow: 0px 0px 1px 1px #1fb31a;
    justify-content: center;
    align-items: center;
 }
-.single-order img{
-  width: 50%;
-}
+/* .single-order img{
+  width: 100%;
+} */
 .single-order-price-buttons{
   display: flex;
   flex-direction: row;
@@ -271,6 +280,10 @@ box-shadow: 0px 0px 1px 1px #1fb31a;
   }
 }
 @media(max-width: 600px){
+  .navbar {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
   .menu-title-class h1{
     font-size: 2.5rem;
   }
@@ -290,18 +303,17 @@ box-shadow: 0px 0px 1px 1px #1fb31a;
   #main-title{
     height: 60vh;
   }
+  .login-class, .signup-class{
+    margin-top: 25%;
+  }
 }
 @media(max-width: 410px){
   .Order-button{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 2% 5%;
   }
 }
-@media(max-width: 388px){
-  .Order-button{
-    font-size: 1.2rem;
-  }
-}
+
 @media(max-width: 800px){
   .login-class, .signup-class{
     width: 70%;
@@ -311,9 +323,7 @@ box-shadow: 0px 0px 1px 1px #1fb31a;
   .login-class, .signup-class{
     width: 90%;
   }
-  .navbar-brand img{
-    width: 150px;
-  }
+
   .navbar-toggler-icon{
     width: 20px;
   }
@@ -322,8 +332,8 @@ box-shadow: 0px 0px 1px 1px #1fb31a;
     border: none;
   }
 }
-@media(max-width: 1200px){
-  .single-order img{
-    width: 100%;
+@media(max-width: 768px){
+  .single-order > div{
+    padding: 0 3rem;
   }
-}
+} 
